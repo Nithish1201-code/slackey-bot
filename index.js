@@ -75,6 +75,14 @@ app.command("/slackey-joke", async ({ ack, respond}) => {
     }
 });
 
+app.command("/slackey-about", async ({ ack, respond}) => {
+    await ack();
+    await respond({ text: "I am Slackey, your friendly Slack bot! I can help you with various commands like pinging, rolling dice, flipping coins, telling jokes, and more!" });
+});
+
+
+
+
 (async () => {
   await app.start();
   console.log("bot is running!");
